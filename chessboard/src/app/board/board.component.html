@@ -2,7 +2,7 @@
 <div class="board">
     <ng-container *ngIf="knightPosition$|async as kp">
         <div class="square-container" *ngFor="let square of squares">
-            <app-square *ngIf="xy(square) as pos" [black]="isBlack(pos)" (click) = "getBoardClicK(pos)">
+            <app-square *ngIf="xy(square) as pos" [black]="isBlack(pos)" [possibleMove]="isLegalMove(square)" (click) = "getBoardClicK(pos)">
                 <app-knight *ngIf="pos.x === kp.x && pos.y === kp.y">
                 </app-knight>
             </app-square>

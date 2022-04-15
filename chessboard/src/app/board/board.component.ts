@@ -30,6 +30,17 @@ export class BoardComponent implements OnInit {
     return(x + y) % 2 === 1;
   }
 
+
+  isLegalMove(square: any) {
+      let Mx = square % 8 - this.game.currentPosition.x;
+      let My = Math.floor(square / 8) - this.game.currentPosition.y;
+
+      return  (Math.abs(Mx) === 2 && Math.abs(My) === 1) ||
+              (Math.abs(Mx) === 1 && Math.abs(My) === 2);
+      
+  }
+
+
   getBoardClicK(pos: Coord) {
       if (this.game.isLegalMove(pos)) {
           this.game.moveKnight(pos);
@@ -38,5 +49,7 @@ export class BoardComponent implements OnInit {
         alert("Illegal Knight Move, Retry")
       }
   }
+  
 
 }
+/* */

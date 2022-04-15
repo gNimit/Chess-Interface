@@ -8,6 +8,7 @@ import { BoardComponent } from './board/board.component';
 import { KnightComponent } from './knight/knight.component';
 import { GameServiceService } from './game-service.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -29,18 +29,6 @@ export class GameServiceService {
             (Math.abs(xchange) === 1 && Math.abs(ychange) === 2);
   }
 
-  arePossibleMoves(currentPosition: Coord) {
 
-      const {x, y} = this.currentPosition;
-      
-
-      for (let i = 0; i < 63; i++) {
-        let Mx = i % 8 - x;
-        let My = Math.floor(i / 8) - y;
-
-      }
-
-      
-  }
 
 }
