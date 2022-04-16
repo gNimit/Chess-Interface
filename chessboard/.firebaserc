@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "chess-knight-interface": {
+      "hosting": {
+        "chessboard": [
+          "chess-knight-interface"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "chess-knight-interface"
+  }
+}
